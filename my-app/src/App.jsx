@@ -1,12 +1,18 @@
 import './App.css'
 import Taskform from './Taskform.jsx'
 import Task from './Task.jsx';
-import { useState } from 'react';
+import { useEffect,useState } from 'react';
 
 function App() {
-  const[tasks,setTasks]=useState(initialState:[]);
+  const[tasks,setTasks]=useState([]);
+  useEffect(() => {
+    if(tasks===null){
+      alert ('read here');
+    }
+    localStorage.setItem('tasks',JSON.stringify(tasks));
+  },[tasks]);
   function addTask(name){
-    setTasks(value: prev =>{
+    setTasks(prev =>{
       return [...prev,{name:name,done:false}];
     });
   }
@@ -15,7 +21,7 @@ function App() {
     <main>
       <Taskform onAdd={addTask}/>
       {tasks.map(task=>(
-        <Task />
+        <Task{...task} />
       ))}
     </main>      
   );

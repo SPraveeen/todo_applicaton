@@ -1,10 +1,10 @@
-import Checkbox from "./Checkbox.jsx";
-
-export default function Task(){
+import Checkbox from "./checkbox.jsx";
+;
+export default function Task({name,done}){
   return (
     <div className="Task">
-    <Checkbox defaultChecked={true}/>
-    test task
+    <Checkbox defaultChecked={done}/>
+    {name}
     </div>
   )
 }
