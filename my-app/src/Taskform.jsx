@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-export default function Taskform() {
-        const [taskName, setTaskName] = useState('');
+export default function Taskform({onAdd}) {
+    const [taskName, setTaskName] = useState(initialState:'');
     return(
-    <form>
+    <form onSubmit={ev => onAdd(taskName)}>
         <button>+</button>
         <input type="text" 
         value={taskName}
