@@ -1,12 +1,18 @@
 import './App.css'
 import Taskform from './Taskform.jsx'
+import Task from './Task.jsx';
 
 function App() {
 
   return (
-    <div>
+    <main>
       <Taskform/>
-    </div>      
+      <Task/>
+      <Task/>
+      <Task/>
+      <Task/>
+      <Task/>
+    </main>      
   );
 }
 

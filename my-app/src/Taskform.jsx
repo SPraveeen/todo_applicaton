@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Taskform() {
-    const[taskName,setTaskName]=useState(initialState:'');
+        const [taskName, setTaskName] = useState('');
     return(
     <form>
         <button>+</button>
