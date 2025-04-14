@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function checkbox({defaultchecked: boolean = false}) {
+export default function Checkbox({defaultchecked =  false}) {
     const[checked,setchecked]=useState(defaultchecked);
     return (
         <div>
