@@ -1,6 +1,6 @@
 body{
   background-color: #17181f;
-  color: #aaa;
+  color: #ddd;
 }
 *{
   box-sizing: border-box;
@@ -38,9 +38,61 @@ div.Task{
   padding: 5px 9px;
   margin-top: 5px;
   display: flex;
+  align-items: center;
+  transition: opacity 0.3s linear;
 }
 
 div.Task svg{
   height: 20px;
-  margin-right: 4px;
+  margin-right: 6px;
+  fill:#61DAF8;
+}
+
+div.Task.done{
+  opacity: 0.3;
+}
+
+div.Task-name, div.Task form{
+  flex-grow: 1;
+}
+
+div.Task span{
+  position: relative;
+}
+div.Task span:before{
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  top:10px;
+  transition: width 0.1s linear;
+}
+
+div.Task.done span:before{
+  width: 100%;
+}
+
+h1,h2{
+  text-align: center;
+}
+div.checkbox{
+  display: flex;
+  align-items: center;
+}
+button.trash{
+  background: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+}
+button.trash svg{
+  fill:#888;
+  height:14px;
+}
+div.Task input{
+  border : 2px solid #555;
+  border-radius: 5px;
+  padding:2px 4px
 }
