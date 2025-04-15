@@ -21,12 +21,16 @@ function App() {
       return [...prev,{name:name,done:false}];
     });
   }
+  
+  function updateTaskDone(taskIndex,newDone){
+    
+  }
 
   return (
     <main>
       <Taskform onAdd={addTask}/>
-      {tasks.map(task=>(
-        <Task{...task} />
+      {tasks.map((task,index)=>(
+        <Task{...task} onToggle={done=>updateTaskDone(index,done)} />
       ))}
     </main>      
   );
