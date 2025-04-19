@@ -55,7 +55,7 @@ function App() {
   return (
     <main>
       <h1>{numberComplete}/{numberTotal} Complete</h1>
-      <h2>{getMessage}</h2>
+      <h2>{getMessage()}</h2>
       <Taskform onAdd={addTask}/>
       {tasks.map((task,index)=>(
         <Task{...task}

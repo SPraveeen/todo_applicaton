@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function Checkbox({checked : boolean = false,onClick}) {
+export default function Checkbox({ checked = false, onClick }) {
     
     return (
         <div onClick={onClick}>
